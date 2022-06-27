@@ -1,0 +1,61 @@
+<div class="container-fluid">
+
+  <div class="wrapper">
+
+    <h1 class="text-center">Simple Calculator</h1>
+    <h3 class="text-center">Angular frontend met Java backend.</h3>
+    <div> With this application you can make singular calculations.<br>
+      The formula will be send to the backend via REST where the calculation itself will be executed.<br>
+      The formula as well as the result will be saved in an in-memory database.<br>
+      On the right you can load the history of previously made calculations.
+    </div>
+
+    <div class="main">
+      <div class="field input" type="text">{{input}}</div>
+
+      <div class="field result" type="text">{{result}}</div>
+
+      <div>
+        <button class="keys" type="button" (click)="pressNum('7')">7</button>
+        <button class="keys" type="button" (click)="pressNum('8')">8</button>
+        <button class="keys" type="button" (click)="pressNum('9')">9</button>
+        <button class="keys del" type="button" (click)="del()">Del</button>
+        <button class="keys del" type="button" (click)="clear()">Clear</button>
+      </div>
+      <div>
+        <button class="keys" type="button" (click)="pressNum('4')">4</button>
+        <button class="keys" type="button" (click)="pressNum('5')">5</button>
+        <button class="keys" type="button" (click)="pressNum('6')">6</button>
+        <button class="keys operator" type="button" (click)="pressOperator('*')">X</button>
+        <button class="keys operator" type="button" (click)="pressOperator('/')">/</button>
+      </div>
+      <div>
+        <button class="keys" type="button" (click)="pressNum('1')">1</button>
+        <button class="keys" type="button" (click)="pressNum('2')">2</button>
+        <button class="keys" type="button" (click)="pressNum('3')">3</button>
+        <button class="keys operator" type="button" (click)="pressOperator('+')">+</button>
+        <button class="keys operator" type="button" (click)="pressOperator('-')">-</button>
+      </div>
+      <div>
+        <button class="keys" type="button" (click)="pressNum('0')">0</button>
+        <button class="keys" type="button" (click)="pressNum('.')">.</button>
+        <button class="keys" type="button" (click)="getAnswer()">=</button>
+      </div>
+    </div>
+
+    <div class="history">
+      <button class="" type="button" (click)="getHistory()">Load history</button>
+      <table>
+        <tr *ngFor="let calc of calculationList">
+          <td>{{calc.value1}}</td>
+          <td>{{calc.divider}}</td>
+          <td>{{calc.value2}} = </td>
+          <td>{{calc.result}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</div>

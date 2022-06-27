@@ -1,0 +1,46 @@
+.wrapper {
+  width: 100%;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.main {
+    height: calc(50% / 4);
+    width:50%;
+    padding: 2%;
+    font-size: 2rem;
+    text-align: left;
+    font-family: Courier, monospace;
+    overflow: auto;
+    float:left
+}
+.history {
+  width:45%;
+  float:right;
+}
+.keys {
+    margin: 0;
+    width: 20%;
+    height: 20%;
+    background: whitesmoke;
+    color: black;
+    padding: 0.5%;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+.del{
+background-color:#dd2d00;
+}
+.operator{
+background-color:#30D5C8;
+}
+.field {
+   min-height:40px;
+   font-size: 2rem;
+}
+.input {
+ background-color:#A0A0A0;
+}
+.result {
+  background-color:#F0F0F0;
+}
